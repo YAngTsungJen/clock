@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 程式區 */
+*{
+    box-sizing: border-box;
+}
+
+.wrap{
+    background: #293B29 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin: 0 auto;
+    width: 1280px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_wrap{
+    background: #3d5a45;
+    opacity: 1;
+    width: 350px;
+    height: 350px;
+    border-radius: 20%;
+    position: relative;
+}
+.clock{
+    border: 4px solid #212f0b;
+    background: #293B29;
+    border-radius: 50%;
+    position: absolute;
+    left: 7%;
+    top: 7%;
+    width: 300px;
+    height: 300px;
+}
+.plate{
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    left: 16%;
+    top: 15%;
+    /* border: 3px solid red; */
+    position: relative;
+}
+/* 白色 */
+.white{
+    width: 3px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    transform-origin: 0px 110px;
+    left: 50%;
+    top: -6px;
+}
+/* 橘線 */
+.line{
+    width: 2px;
+    height: 28px;
+    background: #ff7600;
+    position: absolute;
+    transform-origin: 0 118px;
+    left: 100px;
+    top: -12px;
+}
+
+/* 星星 */
+.star{
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(50% 0, 66% 33%, 100% 50%, 66% 66%, 50% 100%, 33% 66%, 0 50%, 33% 33%);
+    background: #ff7600;
+    position: absolute;
+    transform-origin: 3px 114px;
+    left: 48%;
+    top: -9px;
+}
+
+
+
+.hour{
+    width: 6px;
+    height: 40px;
+    background: white;
+    opacity: 1;
+    transform-origin: top;
+    position: absolute;
+    top: 51%;
+    left: 49%;
+    border-radius: 90% 90%;
+}
+.point{
+    width: 8px;
+    height: 8px;
+    background: orange;
+    border-radius: 52%;
+    transform-origin: bottom;
+    position: absolute;
+    top: 50.5%;
+    left: 47.5%;
+}
+.min{
+    width: 6px;
+    height: 76px;
+    background: red;
+    opacity: 1;
+    transform-origin: top;
+    position: absolute;
+    top: 51%;
+    left: 48.5%;
+    border-radius: 90% 90%;
+}
+
+.sec{
+    width: 6px;
+    height: 108px;
+    background: blue;
+    opacity: 1;
+    transform-origin: top;
+    position: absolute;
+    top: 51%;
+    left: 49%;
+    border-radius: 90% 90%;
+}
+
+.line span{
+    position: absolute;
+    left: -6px;
+    top: -20px;
+    color: white;
+}
+.line > .am{
+    position: absolute;
+    top: 30px;
+}
